@@ -17,7 +17,7 @@ namespace TextEditor
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ms_MainMenu());
+            Application.Run(new F_TextEditor());
         }
     }
 }

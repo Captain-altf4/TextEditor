@@ -11,5 +11,5 @@ D:\Ли Александр\TextEditor\TextEditor\obj\Debug\netcoreapp3.1\TextEdi
 D:\Ли Александр\TextEditor\TextEditor\obj\Debug\netcoreapp3.1\TextEditor.dll
 D:\Ли Александр\TextEditor\TextEditor\obj\Debug\netcoreapp3.1\TextEditor.pdb
 D:\Ли Александр\TextEditor\TextEditor\obj\Debug\netcoreapp3.1\TextEditor.genruntimeconfig.cache
-D:\Ли Александр\TextEditor\TextEditor\obj\Debug\netcoreapp3.1\TextEditor.ms_MainMenu.resources
 D:\Ли Александр\TextEditor\TextEditor\obj\Debug\netcoreapp3.1\TextEditor.csproj.GenerateResource.cache
+D:\Ли Александр\TextEditor\TextEditor\obj\Debug\netcoreapp3.1\TextEditor.F_TextEditor.resources

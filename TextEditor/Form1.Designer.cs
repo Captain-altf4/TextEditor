@@ -1,7 +1,7 @@
 ﻿
 namespace TextEditor
 {
-    partial class ms_MainMenu
+    partial class F_TextEditor
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,38 +29,27 @@ namespace TextEditor
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.rtb_Editor = new System.Windows.Forms.RichTextBox();
+            this.ms_MainMenu = new System.Windows.Forms.MenuStrip();
             this.mb_File = new System.Windows.Forms.ToolStripMenuItem();
             this.mb_Open = new System.Windows.Forms.ToolStripMenuItem();
             this.mb_Save = new System.Windows.Forms.ToolStripMenuItem();
             this.mb_SaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.mb_Close = new System.Windows.Forms.ToolStripMenuItem();
+            this.rtb_Editor = new System.Windows.Forms.RichTextBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.menuStrip1.SuspendLayout();
+            this.ms_MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // ms_MainMenu
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ms_MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mb_File});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(342, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // rtb_Editor
-            // 
-            this.rtb_Editor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtb_Editor.Location = new System.Drawing.Point(12, 27);
-            this.rtb_Editor.Name = "rtb_Editor";
-            this.rtb_Editor.Size = new System.Drawing.Size(318, 359);
-            this.rtb_Editor.TabIndex = 1;
-            this.rtb_Editor.Text = "";
+            this.ms_MainMenu.Location = new System.Drawing.Point(0, 0);
+            this.ms_MainMenu.Name = "ms_MainMenu";
+            this.ms_MainMenu.Size = new System.Drawing.Size(342, 24);
+            this.ms_MainMenu.TabIndex = 0;
+            this.ms_MainMenu.Text = "menuStrip1";
             // 
             // mb_File
             // 
@@ -78,6 +67,7 @@ namespace TextEditor
             this.mb_Open.Name = "mb_Open";
             this.mb_Open.Size = new System.Drawing.Size(180, 22);
             this.mb_Open.Text = "Открыть";
+            this.mb_Open.Click += new System.EventHandler(this.mb_Open_Click);
             // 
             // mb_Save
             // 
@@ -97,22 +87,33 @@ namespace TextEditor
             this.mb_Close.Size = new System.Drawing.Size(180, 22);
             this.mb_Close.Text = "Закрыть";
             // 
+            // rtb_Editor
+            // 
+            this.rtb_Editor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtb_Editor.Location = new System.Drawing.Point(12, 27);
+            this.rtb_Editor.Name = "rtb_Editor";
+            this.rtb_Editor.Size = new System.Drawing.Size(318, 359);
+            this.rtb_Editor.TabIndex = 1;
+            this.rtb_Editor.Text = "";
+            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // ms_MainMenu
+            // F_TextEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(342, 398);
             this.Controls.Add(this.rtb_Editor);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "ms_MainMenu";
+            this.Controls.Add(this.ms_MainMenu);
+            this.MainMenuStrip = this.ms_MainMenu;
+            this.Name = "F_TextEditor";
             this.Text = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.ms_MainMenu.ResumeLayout(false);
+            this.ms_MainMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,7 +121,7 @@ namespace TextEditor
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip ms_MainMenu;
         private System.Windows.Forms.RichTextBox rtb_Editor;
         private System.Windows.Forms.ToolStripMenuItem mb_File;
         private System.Windows.Forms.ToolStripMenuItem mb_Open;
