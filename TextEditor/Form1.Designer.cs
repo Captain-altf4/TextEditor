@@ -37,12 +37,12 @@ namespace TextEditor
             this.mb_SaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.mb_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.rtb_Editor = new System.Windows.Forms.RichTextBox();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.contextMenu_RTB = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cm_Copy = new System.Windows.Forms.ToolStripMenuItem();
             this.cm_Cut = new System.Windows.Forms.ToolStripMenuItem();
             this.cm_Paste = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.ms_MainMenu.SuspendLayout();
             this.contextMenu_RTB.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +71,7 @@ namespace TextEditor
             // mb_Open
             // 
             this.mb_Open.Name = "mb_Open";
-            this.mb_Open.Size = new System.Drawing.Size(180, 22);
+            this.mb_Open.Size = new System.Drawing.Size(163, 22);
             this.mb_Open.Text = "Открыть";
             this.mb_Open.Click += new System.EventHandler(this.mb_Open_Click);
             // 
@@ -79,7 +79,7 @@ namespace TextEditor
             // 
             this.mb_Save.Enabled = false;
             this.mb_Save.Name = "mb_Save";
-            this.mb_Save.Size = new System.Drawing.Size(180, 22);
+            this.mb_Save.Size = new System.Drawing.Size(163, 22);
             this.mb_Save.Text = "Сохранить";
             this.mb_Save.Click += new System.EventHandler(this.mb_Save_Click);
             // 
@@ -87,7 +87,7 @@ namespace TextEditor
             // 
             this.mb_SaveAs.Enabled = false;
             this.mb_SaveAs.Name = "mb_SaveAs";
-            this.mb_SaveAs.Size = new System.Drawing.Size(180, 22);
+            this.mb_SaveAs.Size = new System.Drawing.Size(163, 22);
             this.mb_SaveAs.Text = "Сохранить как...";
             this.mb_SaveAs.Click += new System.EventHandler(this.mb_SaveAs_Click);
             // 
@@ -95,7 +95,7 @@ namespace TextEditor
             // 
             this.mb_Close.Enabled = false;
             this.mb_Close.Name = "mb_Close";
-            this.mb_Close.Size = new System.Drawing.Size(180, 22);
+            this.mb_Close.Size = new System.Drawing.Size(163, 22);
             this.mb_Close.Text = "Закрыть";
             this.mb_Close.Click += new System.EventHandler(this.mb_Close_Click);
             // 
@@ -111,6 +111,36 @@ namespace TextEditor
             this.rtb_Editor.TabIndex = 1;
             this.rtb_Editor.Text = "";
             // 
+            // contextMenu_RTB
+            // 
+            this.contextMenu_RTB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cm_Copy,
+            this.cm_Cut,
+            this.cm_Paste});
+            this.contextMenu_RTB.Name = "contextMenu_RTB";
+            this.contextMenu_RTB.Size = new System.Drawing.Size(181, 92);
+            // 
+            // cm_Copy
+            // 
+            this.cm_Copy.Name = "cm_Copy";
+            this.cm_Copy.Size = new System.Drawing.Size(180, 22);
+            this.cm_Copy.Text = "Копировать";
+            this.cm_Copy.Click += new System.EventHandler(this.cm_Copy_Click);
+            // 
+            // cm_Cut
+            // 
+            this.cm_Cut.Name = "cm_Cut";
+            this.cm_Cut.Size = new System.Drawing.Size(180, 22);
+            this.cm_Cut.Text = "Вырезать";
+            this.cm_Cut.Click += new System.EventHandler(this.cm_Cut_Click);
+            // 
+            // cm_Paste
+            // 
+            this.cm_Paste.Name = "cm_Paste";
+            this.cm_Paste.Size = new System.Drawing.Size(180, 22);
+            this.cm_Paste.Text = "Вставить";
+            this.cm_Paste.Click += new System.EventHandler(this.cm_Paste_Click);
+            // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
@@ -119,33 +149,6 @@ namespace TextEditor
             // saveFileDialog
             // 
             this.saveFileDialog.Filter = "txt files|*.txt| all files|*.*";
-            // 
-            // contextMenu_RTB
-            // 
-            this.contextMenu_RTB.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cm_Copy,
-            this.cm_Cut,
-            this.cm_Paste});
-            this.contextMenu_RTB.Name = "contextMenu_RTB";
-            this.contextMenu_RTB.Size = new System.Drawing.Size(140, 70);
-            // 
-            // cm_Copy
-            // 
-            this.cm_Copy.Name = "cm_Copy";
-            this.cm_Copy.Size = new System.Drawing.Size(139, 22);
-            this.cm_Copy.Text = "Копировать";
-            // 
-            // cm_Cut
-            // 
-            this.cm_Cut.Name = "cm_Cut";
-            this.cm_Cut.Size = new System.Drawing.Size(139, 22);
-            this.cm_Cut.Text = "Вырезать";
-            // 
-            // cm_Paste
-            // 
-            this.cm_Paste.Name = "cm_Paste";
-            this.cm_Paste.Size = new System.Drawing.Size(139, 22);
-            this.cm_Paste.Text = "Вставить";
             // 
             // F_TextEditor
             // 

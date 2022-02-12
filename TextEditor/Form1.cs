@@ -67,5 +67,28 @@ namespace TextEditor
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 fileEditor.WriteFileAs(rtb_Editor.Text, saveFileDialog.FileName);
         }
+
+        private void cm_Copy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(rtb_Editor.SelectedText);
+        }
+
+        private void cm_Cut_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(rtb_Editor.SelectedText);
+            rtb_Editor.SelectedText = "";
+        }
+
+        private void cm_Paste_Click(object sender, EventArgs e)
+        {
+            if (rtb_Editor.SelectedText == "")
+            {
+                int cursorPos = rtb_Editor.SelectionStart;
+                rtb_Editor.Text = rtb_Editor.Text.Insert(cursorPos, Clipboard.GetText());
+                rtb_Editor.SelectionStart = cursorPos + Clipboard.GetText().Length;
+            }
+            else
+                rtb_Editor.SelectedText = Clipboard.GetText();
+        }
     }
 }
