@@ -71,18 +71,22 @@ namespace TextEditor
             // 
             // mb_Save
             // 
+            this.mb_Save.Enabled = false;
             this.mb_Save.Name = "mb_Save";
             this.mb_Save.Size = new System.Drawing.Size(180, 22);
             this.mb_Save.Text = "Сохранить";
+            this.mb_Save.Click += new System.EventHandler(this.mb_Save_Click);
             // 
             // mb_SaveAs
             // 
+            this.mb_SaveAs.Enabled = false;
             this.mb_SaveAs.Name = "mb_SaveAs";
             this.mb_SaveAs.Size = new System.Drawing.Size(180, 22);
             this.mb_SaveAs.Text = "Сохранить как...";
             // 
             // mb_Close
             // 
+            this.mb_Close.Enabled = false;
             this.mb_Close.Name = "mb_Close";
             this.mb_Close.Size = new System.Drawing.Size(180, 22);
             this.mb_Close.Text = "Закрыть";
