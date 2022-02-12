@@ -24,6 +24,12 @@ namespace TextEditor
             mb_SaveAs.Enabled = true;
             mb_Close.Enabled = true;
         }
+        void LockControlls()
+        {
+            mb_Save.Enabled = false;
+            mb_SaveAs.Enabled = false;
+            mb_Close.Enabled = false;
+        }
 
         private void mb_Open_Click(object sender, EventArgs e)
         {
@@ -47,6 +53,19 @@ namespace TextEditor
         private void mb_Save_Click(object sender, EventArgs e)
         {
             fileEditor.WriteFile(rtb_Editor.Text);
+        }
+
+        private void mb_Close_Click(object sender, EventArgs e)
+        {
+            fileEditor = null;
+            rtb_Editor.Text = "";
+            LockControlls();
+        }
+
+        private void mb_SaveAs_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                fileEditor.WriteFileAs(rtb_Editor.Text, saveFileDialog.FileName);
         }
     }
 }
